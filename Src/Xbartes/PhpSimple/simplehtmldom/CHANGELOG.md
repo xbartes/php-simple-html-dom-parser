@@ -3,6 +3,38 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [1.9.1] - 2019-10-20
+### Fixed
+- Fixed broken "text" selectors [#175](https://sourceforge.net/p/simplehtmldom/bugs/175/)
+
+## [1.9] - 2019-05-30
+### Added
+- Added unit test for bug reports
+  - Added test for bug [#153](https://sourceforge.net/p/simplehtmldom/bugs/153/)
+  - Added test for bug [#163](https://sourceforge.net/p/simplehtmldom/bugs/163/)
+  - Added test for bug [#166](https://sourceforge.net/p/simplehtmldom/bugs/166/)
+  - Added test for bug [#169](https://sourceforge.net/p/simplehtmldom/bugs/169/)
+- Added unit test for character sets UTF-8, CP1251 and CP1252 (#142)
+- Added support for meta charset to parse_charset
+- Added detection for CP1251 to parse_charset, using iconv
+- Added LICENSE file (MIT) to the project root
+- Added functions to `simple_html_dom_node`
+  - `remove`: Removes the current node recursively from the DOM tree
+  - `removeChild`: Removes a child node recursively from the DOM tree
+  - `hasClass`: Checks if the current node has the specified class name
+  - `addClass`: Adds one or more classes to the current node
+  - `removeClass`: Removes one or more classes from the current node
+  - `save`: Saves the current node to disk
+### Changed
+- Changed manual from custom implementation to MkDocs (https://www.mkdocs.org/)
+### Fixed
+- Fixed warning when trying to clear() the DOM on a null nodes list (#153)
+- Fixed missing whitespace when returning plaintext (#163)
+- Fixed broken detection of duplicate attributes (#166)
+- Fixed broken detection of CP1252 (ISO-8859-1) documents (#142)
+- Fixed error using next-sibling combinator ('E + F') on last child
+- Fixed selector parsing for attribute selectors ending on "s" or "i" (#169)
+
 ## [1.8.1] - 2019-01-13
 ### Fixed
 - Fixed various bugs related to parsing classes and ids

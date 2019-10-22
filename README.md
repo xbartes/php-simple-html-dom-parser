@@ -1,7 +1,7 @@
 php-simple-html-dom-parser
 ==========================
 
-Version 1.8.2
+Version 1.9.1
 
 Updated version of https://github.com/sunra/php-simple-html-dom-parser/
 
@@ -14,7 +14,7 @@ Install
  composer.phar
 ```json
 "require": {
-    "xbartes/php-simple-html-dom-parser": "1.8.2"
+    "xbartes/php-simple-html-dom-parser": "1.9.1"
 }
 ```
 
